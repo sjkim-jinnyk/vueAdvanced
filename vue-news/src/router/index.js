@@ -8,6 +8,11 @@ Vue.use(VueRouter);
 export const router = new VueRouter({
     routes: [
         {
+            // 들어가자마자 news가 뜨게 redirect
+            path: '/',
+            redirect: '/news',
+        },
+        {
             path: '/news',
             component: NewsView,
         },
