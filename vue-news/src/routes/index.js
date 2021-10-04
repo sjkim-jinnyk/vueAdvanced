@@ -3,6 +3,9 @@ import VueRouter from 'vue-router';
 import AskView from '../views/AskView.vue';
 import NewsView from '../views/NewsView.vue';
 import JobsView from '../views/JobsView.vue';
+import UserView from '../views/UserView.vue';
+import ItemView from '../views/ItemView.vue';
+
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
@@ -25,6 +28,14 @@ export const router = new VueRouter({
         {
             path: '/jobs',
             component: JobsView,
+        },
+        {
+            path: '/user/:id',  // id를 param으로 넣어줌
+            component: UserView,
+        },
+        {
+            path: '/item/:id',  
+            component: ItemView,
         },
     ]
 });
