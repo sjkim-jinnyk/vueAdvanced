@@ -1,9 +1,6 @@
 <template>
   <div>
-      <user-profile></user-profile>
-      <!-- <p>name : {{ userInfo.id}}</p>
-      <p>karma : {{ userInfo.karma}}</p>
-      <p>create : {{ userInfo.created}}</p> -->
+      <user-profile :info="userInfo"></user-profile>
   </div>
 </template>
 
@@ -14,11 +11,11 @@ export default {
     components: {
         UserProfile,
     },
-    // computed:{
-    //     userInfo() {
-    //         return this.$store.state.user;
-    //     }
-    // },
+    computed:{
+        userInfo() {
+            return this.$store.state.user;
+        }
+    },
     created() {
         const userName = this.$route.params.id;
         // axios.get(`https://api.hnpwa.com/v0/user/${userName}.json`); => api/index.js에 fetch
