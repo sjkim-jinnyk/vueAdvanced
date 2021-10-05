@@ -1,6 +1,12 @@
 <template>
   <div>
-      <user-profile :info="userInfo"></user-profile>
+      <user-profile :info="userInfo">
+        <div slot="username">{{ userInfo.id }}</div>
+        <div slot="karma">{{ userInfo.karma }}</div>
+        <!-- tempplate은 태그없이 text만 들어간다. -->
+        <template slot="time">{{ userInfo.created }}</template> 
+        
+      </user-profile>
   </div>
 </template>
 

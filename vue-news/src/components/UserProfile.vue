@@ -5,10 +5,16 @@
         <i class="fas fa-user"></i>
     </div>
     <div class="user-description">
-        <div>{{ info.id }}</div>
-        <div class="time">
-        {{ info.created }}
+        <!-- <div>username : {{ info.id }}</div> -->
+        <slot name="username"></slot>
+        <div>
+            <slot name="karma"></slot>
         </div>
+        <div class="time">
+            <!-- time : {{ info.created }} -->
+            <slot name="time"></slot>
+        </div>
+             
     </div>
     </div>
   </div>
