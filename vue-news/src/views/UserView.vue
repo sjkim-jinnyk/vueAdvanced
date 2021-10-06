@@ -2,9 +2,9 @@
   <div>
       <user-profile :info="userInfo">
         <div slot="username">{{ userInfo.id }}</div>
-        <div slot="karma">{{ userInfo.karma }}</div>
+        <span slot="karma">{{ userInfo.karma }}</span>
         <!-- tempplate은 태그없이 text만 들어간다. -->
-        <template slot="time">{{ userInfo.created }}</template> 
+        <span slot="time">Joined {{ userInfo.created }}</span> 
         
       </user-profile>
   </div>

@@ -3,8 +3,8 @@
     <section>
       <!-- 사용자 정보 -->
       <user-profile :info="ItemInfo">
-        <div slot="username">{{ ItemInfo.user }}</div>
-        <template slot="time">{{ ItemInfo.time_ago }}</template>
+        <router-link slot="username" :to="`/user/${ItemInfo.user}`">{{ ItemInfo.user }}</router-link>
+        <template slot="time">Posted {{ ItemInfo.time_ago }}</template>
       </user-profile>
       <!-- <div class="user-container">
         <div>
