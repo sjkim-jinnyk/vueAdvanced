@@ -20,6 +20,13 @@ export const router = new VueRouter({
             name: 'news',
             // component: NewsView,
             component: createListView('NewsView'),
+            // beforeEnter: (to,from, next) => {
+            //     console.log('to', to);
+            //     console.log('from', from);
+            //     console.log(next);
+            //     next(); 
+            // }
+            
         },
         {
             path: '/ask',
